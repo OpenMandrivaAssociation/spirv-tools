@@ -1,6 +1,6 @@
 Name:		spirv-tools
 Version:	2018.0
-Release:	1
+Release:	2
 Group:		Development/Tools
 Summary:	Tools for working with SPIR-V, a language for running on GPUs
 Source0:	https://github.com/KhronosGroup/SPIRV-Tools/archive/v%{version}.tar.gz
