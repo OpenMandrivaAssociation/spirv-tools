@@ -1,14 +1,15 @@
 %define libname %mklibname spirv-tools 0
 
 Name:		spirv-tools
-Version:	2019.3
+Version:	2019.4
 Release:	1
 Group:		Development/Tools
 Summary:	Tools for working with SPIR-V, a language for running on GPUs
 Source0:	https://github.com/KhronosGroup/SPIRV-Tools/archive/v%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	Apache 2.0
-BuildRequires:	cmake ninja
+BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	spirv-headers
 Requires:	%{libname} = %{EVRD}
 
@@ -23,7 +24,8 @@ Group:		System/Libraries
 Libraries needed for spirv-tools
 
 %prep
-%setup -qn SPIRV-Tools-%{version}
+%autosetup -n SPIRV-Tools-%{version} -p1
+
 %cmake	\
 	-DSPIRV-Headers_SOURCE_DIR=%{_prefix} \
 	-DSPIRV_SKIP_TESTS:BOOL=ON \
