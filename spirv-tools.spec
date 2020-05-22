@@ -45,3 +45,4 @@ Libraries needed for spirv-tools
 %{_bindir}/*
 %{_includedir}/spirv-tools
 %{_libdir}/pkgconfig/*.pc
+%{_libdir}/cmake/SPIRV-Tools*/*.cmake
