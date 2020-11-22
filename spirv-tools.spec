@@ -12,7 +12,7 @@ Version:	2020.5
 Release:	1
 Group:		Development/Tools
 Summary:	Tools for working with SPIR-V, a language for running on GPUs
-Source0:	https://github.com/KhronosGroup/SPIRV-Tools/archive/v%{version}.tar.gz
+Source0:	https://github.com/KhronosGroup/SPIRV-Tools/archive/v%{version}/SPIRV-Tools-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 License:	Apache 2.0
 BuildRequires:	cmake
