@@ -8,8 +8,8 @@
 %define dev32name %mklib32name -d spirv-tools
 
 Name:		spirv-tools
-Version:	2020.2
-Release:	2
+Version:	2020.6
+Release:	1
 Group:		Development/Tools
 Summary:	Tools for working with SPIR-V, a language for running on GPUs
 Source0:	https://github.com/KhronosGroup/SPIRV-Tools/archive/v%{version}.tar.gz
@@ -17,7 +17,7 @@ Source100:	%{name}.rpmlintrc
 License:	Apache 2.0
 BuildRequires:	cmake
 BuildRequires:	ninja
-BuildRequires:	spirv-headers
+BuildRequires:	spirv-headers >= 1.5.4.raytracing.fixed
 Requires:	%{libname} = %{EVRD}
 
 %description
@@ -82,6 +82,7 @@ cd ..
 %files
 %{_bindir}/*
 %{_includedir}/spirv-tools
+%{_libdir}/lib*.a
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/cmake/SPIRV-Tools*/*.cmake
 
@@ -92,4 +93,5 @@ cd ..
 %files -n %{dev32name}
 %{_prefix}/lib/pkgconfig/*.pc
 %{_prefix}/lib/cmake/SPIRV-Tools*
+%{_prefix}/lib/lib*.a
 %endif
