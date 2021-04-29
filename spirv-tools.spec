@@ -8,7 +8,7 @@
 %define dev32name %mklib32name -d spirv-tools
 
 Name:		spirv-tools
-Version:	2020.6
+Version:	2021.1
 Release:	1
 Group:		Development/Tools
 Summary:	Tools for working with SPIR-V, a language for running on GPUs
